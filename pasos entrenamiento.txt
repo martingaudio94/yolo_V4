@@ -1,0 +1,36 @@
+
+APARENTA TENSORFLOW_Version < 1.6
+REQUERIMIENTOS:
+pip install opencv-contrib-python
+pip install opencv
+pip install scikit-image
+pip install tensorflow==1.5.x
+pip install keras (para la version de tf 1.5.x)prob [2.2.5]
+
+
+1 etiquetar las imagenes
+2 luego ejecutamos el voc_annotation cambiamos los paths de los xlms y las imagenes,
+ademas debemos agregar la cantidad de clases 
+3 ejecutamos el kmeans.py cambiandole el nombre del archivo de entrenamiento.txt
+
+
+--->>>> para este paso tenemos
+
+yolo-anchors.txt y train.txt
+
+yolo-anchors lo movemos a la carpeta de model_data,
+en esta misma carpeta editamos el archivo voc_classes.txt
+y en cada 1 linea ponemos las clases que utilizamos en el archivo voc_annotation.
+
+LUEGO PARA COMENZAR EL ENTRENAMIENTO ---->>>>
+
+archivo train.py--->>>
+aca debemos cambiar todos los paths de ser necesario en :
+
+(SOLO DE SER NECESARIO)
+a-annotation_train_path
+b-annotation_val_path
+c-classes_path
+d-anchors_path
+(OPCIONAL)
+e-log_dir
